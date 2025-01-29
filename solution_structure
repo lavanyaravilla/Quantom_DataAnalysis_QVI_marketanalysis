@@ -1,0 +1,51 @@
+solution outline
+Data Preparation and Cleaning (Both Tables)
+
+Load Data: Load both the transaction and customer purchase data into Pandas DataFrames.
+Inspect Data:
+head(), info(), describe(): Get an initial understanding of the data.
+Check for missing values (isnull().sum()) and handle them (imputation or dropping).
+Check data types and correct them if necessary (e.g., DATE to datetime).
+Check for duplicates and handle them.
+Clean Data:
+Transaction Table:
+Clean PROD_NAME: Standardize product names (lowercase, remove extra spaces).
+Convert DATE to datetime objects.
+Convert PROD_WEIGHT and other numerical columns to appropriate types (numeric, handle errors).
+Check for and handle outliers in numerical columns (PROD_QTY, TOT_SALES, PROD_WEIGHT).
+Customer Purchase Table:
+Check for inconsistencies or errors in LIFESTAGE and PREMIUM_CUSTOMER categories.
+Consider grouping similar categories if needed (e.g., different levels of "Premium Customer").
+II. Task 1: Analyze Customer Purchasing Behavior
+
+Merge Data: Merge the transaction and customer purchase tables using LYLTY_CARD_NBR as the key.
+Customer Segmentation:
+Calculate key metrics for each customer:
+Total spend (TOT_SALES sum).
+Number of transactions.
+Average transaction value.
+Frequency of purchases (time between transactions).
+Number of unique products purchased.
+Use these metrics along with LIFESTAGE and PREMIUM_CUSTOMER to segment customers. Consider techniques like:
+RFM analysis (Recency, Frequency, Monetary).
+K-Means clustering.
+Rule-based segmentation (e.g., based on spend and lifestage).
+Purchasing Behavior Analysis:
+Analyze sales by customer segment.
+Identify top-selling products overall and within each segment.
+Analyze purchase patterns (e.g., what products are often bought together - association rule mining or market basket analysis).
+Analyze trends in sales over time (if the date range is sufficient).
+Insights and Recommendations: Based on the analysis, provide specific, actionable commercial recommendations. Examples:
+Target specific customer segments with tailored promotions.
+Optimize product assortment based on segment preferences.
+Improve customer retention strategies.
+III. Task 2: Identify Benchmark Stores
+
+Store Performance Metrics: Calculate key metrics for each store:
+Total sales.
+Average transaction value.
+Number of unique customers.
+Sales per square foot (if you have store size data).
+Sales growth over time (if you have sufficient data).
+LIFESTAGE: Customer attribute that identifies whether a customer has a family or not and what point in life they are at e.g. are their children in pre-school/primary/secondary school.
+PREMIUM_CUSTOMER: Customer segmentation used to differentiate shoppers by the price point of products they buy and the types of products they buy. It is used to identify whether customers may spend more for quality or brand or whether they will purchase the cheapest options
