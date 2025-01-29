@@ -1,0 +1,2 @@
+# Quantom_DataAnalysis_QVI_marketanalysis
+Quantom_DataAnalysis_QVI_marketanalysis
